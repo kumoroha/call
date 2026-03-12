@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Master Sweets Terminal v6.0</title>
+    <style>
+        body { background-color: #0d1117; color: #c9d1d9; font-family: 'Consolas', 'Meiryo', sans-serif; display: flex; justify-content: center; padding: 20px; margin: 0; }
+        .container { background-color: #1a1f26; padding: 30px; border-radius: 15px; border: 1px solid #30363d; width: 700px; box-shadow: 0 0 60px rgba(255, 105, 180, 0.15); }
+        h2 { border-bottom: 2px solid #ff79c6; padding-bottom: 10px; color: #ff79c6; text-align: center; letter-spacing: 5px; text-shadow: 0 0 10px rgba(255, 121, 198, 0.5); }
+        
+        .section-title { color: #f1fa8c; font-size: 1em; margin: 25px 0 10px 0; border-left: 5px solid #f1fa8c; padding-left: 10px; background: rgba(241, 250, 140, 0.1); }
+        
+        .menu-list { display: flex; flex-direction: column; gap: 4px; }
+        .checkbox-row { background: #21262d; padding: 12px 20px; border-radius: 4px; display: flex; align-items: center; border: 1px solid transparent; transition: 0.1s; cursor: pointer; }
+        .checkbox-row:hover { background: #30363d; border-color: #ff79c6; }
+        .checkbox-row input { transform: scale(1.4); margin-right: 20px; cursor: pointer; }
+        .checkbox-row span { font-size: 1em; flex-grow: 1; }
+
+        /* 自由記入欄の強化 */
+        .note-label { display: block; margin-top: 25px; color: #ff79c6; font-weight: bold; font-size: 1.1em; }
+        textarea { 
+            width: 100%; 
+            background: #0d1117; 
+            color: #fff; 
+            border: 2px solid #44475a; 
+            padding: 20px; 
+            border-radius: 8px; 
+            margin-top: 10px; 
+            box-sizing: border-box; 
+            font-family: inherit;
+            font-size: 1.4em; /* 文字を大きく設定 */
+            line-height: 1.5;
+        }
+        textarea:focus { border-color: #ff79c6; outline: none; background: #161b22; }
+
+        .btn-submit { width: 100%; padding: 25px; background-color: #ff79c6; color: #282a36; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; margin-top: 30px; font-size: 1.4em; box-shadow: 0 5px 0 #bd93f9; transition: 0.2s; }
+        .btn-submit:active { transform: translateY(3px); box-shadow: none; }
+        .status-footer { font-size: 0.8em; color: #6272a4; margin-top: 35px; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>SWEETS STRATEGY CONSOLE</h2>
+
+    <div class="section-title">PREMIUM SUGAR LOAD (甘味・特製スイーツ)</div>
+    <div class="menu-list">
+        <label class="checkbox-row"><input type="checkbox" name="req" value="特製厚焼きパンケーキ（生クリーム＆追いメープル）"><span>🥞 特製厚焼きパンケーキ（生クリーム＆追いメープル）</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="ダブルチョコ・ベルギーワッフル（バニラアイス添え）"><span>🧇 ダブルチョコ・ベルギーワッフル（バニラアイス添え）</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="焼きたてスコーン（苺ジャム＆ダブルクロテッドクリーム）"><span>🥯 焼きたてスコーン（ジャム＆ダブルクロテッド）</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="とろけるフォンダンショコラ（ベリーソース）"><span>🍫 とろけるフォンダンショコラ（ベリーソース）</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="クレームブリュレ（キャラメリゼ厚め）"><span>🍮 クレームブリュレ（キャラメリゼ厚め）</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="モンブラン・ド・パリ（和栗使用）"><span>🌰 絞りたてモンブラン（和栗使用）</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="生チョコタルト（カカオ70%＆ベリー）"><span>🥧 濃厚生チョコタルト（カカオ70%）</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="季節の特製パフェ（フルサイズ）"><span>🍨 季節の贅沢パフェ（フルサイズ）</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="和三盆の特製わらび餅（黒蜜＆追い金粉）"><span>🍡 和三盆の特製わらび餅（黒蜜＆金粉）</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="自家製どら焼き（バター＆粒あん）"><span>🥯 自家製あんバターどら焼き</span></label>
+    </div>
+
+    <div class="section-title">BEST PAIRING BEVERAGES</div>
+    <div class="menu-list">
+        <label class="checkbox-row"><input type="checkbox" name="req" value="ダージリン 2nd Flush（マスカテル）"><span>☕ ダージリン 2nd Flush (芳醇)</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="ロイヤルミルクティー（アッサム特濃）"><span>☕ 特製ロイヤルミルクティー (アッサム)</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="アールグレイ（アイス・ベルガモット強め）"><span>🍹 アイス・アールグレイ (香り強め)</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="極上ほうじ茶（香ばしい香り）"><span>🍵 極上ほうじ茶 (甘味に合います)</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="冷水/炭酸水（常時補充）"><span>🧊 冷水 / 炭酸水 (リフレッシュ)</span></label>
+    </div>
+
+    <div class="section-title">SERVICE</div>
+    <div class="menu-list">
+        <label class="checkbox-row"><input type="checkbox" name="req" value="彩椛を呼ぶ"><span>👩‍💼 彩椛（あやか）を呼ぶ</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="陽香を呼ぶ"><span>👧 陽香（はるか）を呼ぶ</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="マッサージ要請"><span>💆 肩・首のマッサージを要請</span></label>
+    </div>
+
+    <label class="note-label">CUSTOM INSTRUCTIONS (自由記入欄)</label>
+    <textarea id="note" rows="3" placeholder="「パンケーキは3枚重ねで」「もっと激甘に！」等..."></textarea>
+
+    <button class="btn-submit" onclick="sendOrder()">SEND SUGAR REQUEST</button>
+
+    <div class="status-footer">
+        MASTER PC: 192.168.20.25 | CPU: Xeon 698X Active<br>
+        Revenue Today: 45,500,000 JPY | Blackwell 40 Racks Powering Up
+    </div>
+</div>
+
+<script>
+    function sendOrder() {
+        const selected = Array.from(document.querySelectorAll('input[name="req"]:checked')).map(el => el.value);
+        const note = document.getElementById('note').value;
+        const time = new Date().toLocaleTimeString();
+        if (selected.length === 0 && !note) { alert("リクエストを選択してください。"); return; }
+        const msg = `【マスターオーダー：糖分補給】\n時刻: ${time}\n\n■内容:\n${selected.map(s => " ・" + s).join("\n")}\n\n■特別指示:\n${note || "なし"}\n\n至急、甘い幸せを地下へ届けてください。`;
+        alert(msg);
+        console.log("Transmission Successful. Expect sugar delivery.");
+    }
+</script>
+
+</body>
+</html>
