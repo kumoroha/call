@@ -2,13 +2,13 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>Master Service Console v9.0</title>
+    <title>Master Service Console v10.0</title>
     <style>
         body { background-color: #f5f7f9; color: #333; font-family: 'Helvetica Neue', 'Arial', 'Meiryo', sans-serif; display: flex; justify-content: center; padding: 20px; margin: 0; }
-        .container { background-color: #ffffff; padding: 30px; border-radius: 8px; border: 1px solid #d1d9e0; width: 680px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); }
+        .container { background-color: #ffffff; padding: 30px; border-radius: 8px; border: 1px solid #d1d9e0; width: 720px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); }
         h2 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; text-align: center; letter-spacing: 2px; font-weight: 600; }
         
-        .section-title { color: #555; font-size: 0.95em; margin: 20px 0 10px 0; border-left: 4px solid #0056b3; padding-left: 12px; font-weight: bold; background: #f0f4f8; padding-top: 5px; padding-bottom: 5px; }
+        .section-title { color: #444; font-size: 0.95em; margin: 20px 0 10px 0; border-left: 4px solid #0056b3; padding-left: 12px; font-weight: bold; background: #f0f4f8; padding-top: 5px; padding-bottom: 5px; }
         
         .menu-list { display: flex; flex-direction: column; gap: 3px; }
         .checkbox-row { background: #fafbfc; padding: 10px 15px; border-radius: 4px; display: flex; align-items: center; border: 1px solid #e1e4e8; transition: 0.2s; cursor: pointer; }
@@ -27,7 +27,7 @@
             margin-top: 8px; 
             box-sizing: border-box; 
             font-family: inherit;
-            font-size: 1.2em; /* デカすぎず、読みやすいサイズへ縮小 */
+            font-size: 1.2em; 
             line-height: 1.5;
             resize: vertical;
         }
@@ -42,43 +42,53 @@
 <body>
 
 <div class="container">
-    <h2>SERVICE TERMINAL</h2>
+    <h2>SERVICE TERMINAL v10.0</h2>
 
-    <div class="section-title">CONFECTIONERY (上質な甘味)</div>
+    <div class="section-title">WESTERN SWEETS (洋菓子・デザート)</div>
     <div class="menu-list">
-        <label class="checkbox-row"><input type="checkbox" name="req" value="特製厚焼きパンケーキ（生クリーム＆メープル）"><span>🥞 特製厚焼きパンケーキ (生クリーム＆メープル)</span></label>
-        <label class="checkbox-row"><input type="checkbox" name="req" value="とろけるフォンダンショコラ（バニラアイス）"><span>🍫 とろけるフォンダンショコラ (バニラアイス添え)</span></label>
-        <label class="checkbox-row"><input type="checkbox" name="req" value="焼きたてスコーン（ダブルクロテッドクリーム）"><span>🥯 焼きたてスコーン (クロテッドクリーム増量)</span></label>
-        <label class="checkbox-row"><input type="checkbox" name="req" value="濃厚カスタードのプリン"><span>🍮 濃厚カスタードのキャラメルプリン</span></label>
-        <label class="checkbox-row"><input type="checkbox" name="req" value="絞りたてモンブラン"><span>🌰 絞りたてモンブラン (和栗使用)</span></label>
-        <label class="checkbox-row"><input type="checkbox" name="req" value="和三盆わらび餅（黒蜜＆金粉）"><span>🍡 和三盆わらび餅 (黒蜜＆金粉)</span></label>
-        <label class="checkbox-row"><input type="checkbox" name="req" value="あんバターどら焼き"><span>🥯 特製あんバターどら焼き</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="特製厚焼きパンケーキ（トリプル・メープル＆生クリーム）"><span>🥞 特製厚焼きパンケーキ（生クリーム＆メープル）</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="焼きたてスコーン（ダブルクロテッドクリーム＆苺ジャム）"><span>🥯 焼きたてスコーン（ダブルクロテッドクリーム）</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="とろけるフォンダンショコラ（バニラアイス添え）"><span>🍫 とろけるフォンダンショコラ（バニラアイス）</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="絞りたてモンブラン（最高級和栗使用）"><span>🌰 絞りたてモンブラン（最高級和栗使用）</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="クレームブリュレ（キャラメリゼ厚め）"><span>🍮 クレームブリュレ（キャラメリゼ厚め）</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="ベルギーワッフル（チョコソース＆ホイップ）"><span>🧇 ベルギーワッフル（チョコ＆ホイップ）</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="季節のフルーツタルト（カスタードたっぷり）"><span>🥧 季節のフルーツタルト（カスタードたっぷり）</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="濃厚ピスタチオのバスクチーズケーキ"><span>🧀 濃厚ピスタチオのバスクチーズケーキ</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="マカロン・アソート（10種セット）"><span>🍭 マカロン・アソート（10種セット）</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="季節の贅沢パフェ（フルサイズ）"><span>🍨 季節の贅沢パフェ（フルサイズ）</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="濃厚バニラジェラート（アフォガート仕立て）"><span>☕ 濃厚バニラジェラート（アフォガート）</span></label>
     </div>
 
-    <div class="section-title">TEA & COFFEE (茶葉・抽出)</div>
+    <div class="section-title">JAPANESE SWEETS (和菓子・極み)</div>
     <div class="menu-list">
-        <label class="checkbox-row"><input type="checkbox" name="req" value="ダージリン 2nd Flush"><span>☕ ダージリン 2nd Flush (芳醇な香り)</span></label>
-        <label class="checkbox-row"><input type="checkbox" name="req" value="アールグレイ（ベルガモット）"><span>☕ アールグレイ (天然ベルガモット)</span></label>
-        <label class="checkbox-row"><input type="checkbox" name="req" value="ロイヤルミルクティー（特濃）"><span>☕ ロイヤルミルクティー (特濃アッサム)</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="和三盆わらび餅（黒蜜＆追い金粉）"><span>🍡 和三盆わらび餅（黒蜜＆追い金粉）</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="特製あんバターどら焼き（皮焼きたて）"><span>🥯 特製あんバターどら焼き（皮焼きたて）</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="宇治抹茶の濃厚テリーヌ"><span>🍵 宇治抹茶の濃厚テリーヌ</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="大粒苺の練乳クリーム大福"><span>🍓 大粒苺の練乳クリーム大福</span></label>
+    </div>
+
+    <div class="section-title">BEVERAGES (お飲み物)</div>
+    <div class="menu-list">
+        <label class="checkbox-row"><input type="checkbox" name="req" value="ダージリン 2nd Flush"><span>☕ ダージリン 2nd Flush (芳醇)</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="アールグレイ（天然ベルガモット）"><span>☕ アールグレイ (香り重視)</span></label>
+        <label class="checkbox-row"><input type="checkbox" name="req" value="ロイヤルミルクティー（特濃アッサム）"><span>☕ ロイヤルミルクティー (特濃)</span></label>
         <label class="checkbox-row"><input type="checkbox" name="req" value="ダブルエスプレッソ"><span>☕ 珈琲：ダブルエスプレッソ</span></label>
-        <label class="checkbox-row"><input type="checkbox" name="req" value="炭酸水（レモン）"><span>🍋 強炭酸水 (レモン添え)</span></label>
     </div>
 
-    <div class="section-title">STAFF CALL & SUPPORT</div>
+    <div class="section-title">STAFF & SUPPORT</div>
     <div class="menu-list">
         <label class="checkbox-row"><input type="checkbox" name="req" value="彩椛を呼ぶ"><span>👩‍💼 彩椛（あやか）を呼ぶ</span></label>
         <label class="checkbox-row"><input type="checkbox" name="req" value="陽香を呼ぶ"><span>👧 陽香（はるか）を呼ぶ</span></label>
         <label class="checkbox-row"><input type="checkbox" name="req" value="マッサージ要請"><span>💆 肩・首のリフレッシュ要請</span></label>
-        <label class="checkbox-row"><input type="checkbox" name="req" value="物理作業補助"><span>🔧 物理作業補助 (配線・清掃)</span></label>
     </div>
 
-    <label class="note-label">EXTRA INSTRUCTIONS</label>
-    <textarea id="note" rows="3" placeholder="詳細な指示があれば入力してください"></textarea>
+    <label class="note-label">EXTRA INSTRUCTIONS (詳細指示)</label>
+    <textarea id="note" rows="3" placeholder="「パンケーキは3枚重ね」「激甘で」など入力"></textarea>
 
     <button class="btn-submit" onclick="dispatch()">SEND REQUEST</button>
 
     <div class="status-footer">
-        IP: 192.168.20.25 | CPU: Xeon 698X | Status: 40 Racks Configured<br>
+        IP: 192.168.20.25 | CPU: Xeon 698X | Today's Revenue: 45.7M JPY<br>
         Sumiyoshi-Yamate Mansion Executive System
     </div>
 </div>
@@ -87,9 +97,9 @@
     function dispatch() {
         const selected = Array.from(document.querySelectorAll('input[name="req"]:checked')).map(el => el.value);
         const note = document.getElementById('note').value;
-        if (selected.length === 0 && !note) { alert("リクエストが空です。"); return; }
+        if (selected.length === 0 && !note) { alert("項目を選択してください。"); return; }
         
-        const report = `【Service Request】\n\n■内容:\n${selected.map(s => " ・ " + s).join("\n")}\n\n■備考:\n${note || "なし"}\n\n至急、対応いたします。`;
+        const report = `【至急要請】\n\n■内容:\n${selected.map(s => " ・ " + s).join("\n")}\n\n■備考:\n${note || "なし"}\n\nただいま準備して参ります。`;
         alert(report);
     }
 </script>
